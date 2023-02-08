@@ -3,7 +3,9 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  <% if cart.length == 0 %>
+  <h3>Your cart is empty. Please visit our <%= link_to 'store to add to the cart.', [:root] %></h3>
+  <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +50,5 @@
       <% end %>
     </div>
   </div>
-
+  <% end %>
 </section>
