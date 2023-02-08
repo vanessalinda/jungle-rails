@@ -1,4 +1,11 @@
 <article>
+
+<% if product.quantity == 0 %>
+  <aside class="sold">
+   SOLD OUT!
+  </aside>
+  <% end %>
+
   <%= link_to product_path(product) do %>
     <%= image_tag product.image.thumb.url , alt: product.name %>
     <h1>
